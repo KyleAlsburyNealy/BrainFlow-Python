@@ -1,0 +1,38 @@
+-install visual studio 2019 with ATL components
+-install cmake (CMake>=3.1)
+-install anaconda
+-open anaconda powershell prompt from windows search menu
+
+-create brainflow environment
+	conda create --name brainflow python=3.8
+
+
+-compile libraries
+cd C:\Users\neuro\git\brainflow
+[python -m pip install cmake]
+cd tools
+python build.py
+
+-see also 
+https://brainflow.readthedocs.io/en/stable/BuildBrainFlow.html#compilation-of-core-module-and-c-binding
+
+-repo link
+https://github.com/brainflow-dev/brainflow/tree/ant
+https://github.com/brainflow-dev/brainflow/pull/ant_boards
+
+-install brainflow python
+cd python-package
+python -m pip install -U .
+
+
+- install jupyter from powershell:
+
+>> conda activate brainflow
+>> (brainflow) conda install -c conda-forge jupyterlab
+
+- install toolboxes
+>> (brainflow) pip install matplotlib
+>> (brainflow) pip install pandas
+
+download requirements.txt (Cris)
+pip3 freeze > requirements.txt 
